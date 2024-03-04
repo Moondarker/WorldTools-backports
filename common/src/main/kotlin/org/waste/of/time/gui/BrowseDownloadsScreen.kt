@@ -1,9 +1,9 @@
 package org.waste.of.time.gui
 
 import net.minecraft.client.MinecraftClient
-import net.minecraft.client.gui.DrawContext
 import net.minecraft.client.gui.screen.Screen
 import net.minecraft.client.gui.widget.AlwaysSelectedEntryListWidget
+import net.minecraft.client.util.math.MatrixStack
 import net.minecraft.text.Text
 
 // todo: we need a local database of downloads like original wdl mod
@@ -26,7 +26,7 @@ object BrowseDownloadsScreen : Screen(Text.translatable("worldtools.gui.browser.
 
     class WorldDownloadEntry : AlwaysSelectedEntryListWidget.Entry<WorldDownloadEntry>() {
         override fun render(
-            context: DrawContext?,
+            matrices: MatrixStack?,
             index: Int,
             y: Int,
             x: Int,
